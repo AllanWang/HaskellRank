@@ -3,7 +3,6 @@ dist-*
 cabal-dev
 *.o
 *.hi
-*.hie
 *.chi
 *.chs.h
 *.dyn_o
@@ -16,8 +15,20 @@ cabal.sandbox.config
 *.aux
 *.hp
 *.eventlog
-.stack-work/
 cabal.project.local
 cabal.project.local~
 .HTF/
 .ghc.environment.*
+
+# Stack
+.stack-work/
+Haskell-Playground.cabal
+*~
+out/
+
+# IntelliJ
+*.iml
+.idea/
+
+# Mac
+.DS_Store

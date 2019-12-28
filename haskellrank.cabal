@@ -1,0 +1,61 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 7f5010b97d0b577cf3234927c32f00309e96b29a39c62c15404474f41dc94af7
+
+name:           haskellrank
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/AllanWang/HaskellRank#readme>
+homepage:       https://github.com/AllanWang/HaskellRank#readme
+bug-reports:    https://github.com/AllanWang/HaskellRank/issues
+author:         Allan Wang
+maintainer:     me@allanwang.ca
+copyright:      2019 Allan Wang
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/AllanWang/HaskellRank
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_haskellrank
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable haskellrank-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_haskellrank
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , haskellrank
+  default-language: Haskell2010
+
+test-suite haskellrank-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_haskell_rank
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , haskellrank
+  default-language: Haskell2010
