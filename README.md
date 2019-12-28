@@ -1,0 +1,2 @@
+# HaskellRank
+Haskell Coding Practice
